@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Responsive Payment getway form design in Hindi</title>
+	<link rel="stylesheet" href="payment.css">
+</head>
+
+<body>
+<header>
+	<div class="container">
+		<div class="left">
+			<h3>FESTIVBUS TICKETS</h3>
+			<form>
+                <form id="studentInfoForm">
+            
+                    <label for="rollNo">Roll Number:</label>
+                    <input type="text" id="rollNo" name="rollNo" required>
+        
+                    <label for="fees">Fees:</label>
+                    <input type="text" id="fees" name="fees" required>
+        
+                    <label for="onDate">On Date:</label>
+                    <input type="date" id="onDate" name="onDate" required>
+        
+                    <label for="place">Place:</label>
+                    <select id="place" name="place" required>
+                        <option value="" disabled selected>Select District</option>
+                        <!-- Add your district options here -->
+                        <option value="district1">Erode</option>
+                        <option value="district2">Coimbatore</option>
+                        <option value="district2">Karur</option>
+                        <option value="district2">Dharmapuri</option>
+                        <option value="district2">Madurai</option>
+                        <option value="district2">Namakkal</option>
+                        <!-- Add more options as needed -->
+                    </select>
+        
+                    
+                </form>
+		</div>
+		<div class="right">
+			<h3>PAYMENT</h3>
+			<form>
+				Accepted Card <br>
+				<img src="card1 (4).png" width="100">
+				<img src="card2.png" width="50">
+				<br><br>
+
+				Credit card number
+			<input type="text" name="" placeholder="Enter card number">
+				
+				Exp month
+				<input type="text" name="" placeholder="Enter Month">
+				<div id="zip">
+					<label>
+						Exp year
+						<select>
+							<option>Choose Year..</option>
+							<option>2022</option>
+							<option>2023</option>
+							<option>2024</option>
+							<option>2025</option>
+						</select>
+					</label>
+						<label>
+						CVV
+						<input type="number" name="" placeholder="CVV">
+					</label>
+				</div>
+			</form>
+			<input type="submit" name="" value="Proceed to Checkout">
+		</div>
+	</div>
+</header>
+<script >
+    const form = document.querySelector('#form');
+
+    const rollnoInput = document.querySelector('#rollno');
+    const feesInput = document.querySelector('#fees');
+    const ondateInput = document.querySelector('#ondate');
+    const districtSelect = document.querySelector('#district');
+
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+
+  if (!rollnoInput.value || !feesInput.value || !ondateInput.value || !districtSelect.value) {
+    alert('Please fill in all required fields.');
+    return;
+  }
+
+  // Additional form validation logic
+
+  // Submit form
+  form.proceedtocheckout();
+});
+    </script>
+</body>
+</html>
